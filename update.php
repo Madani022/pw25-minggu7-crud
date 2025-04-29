@@ -42,33 +42,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $conn->close();
 ?>
 
-    <div class="container">
-        <h1>Edit Data Pengguna</h1>
-        
-        <form action="update.php" method="POST">
-            <input type="hidden" name="id" value="<?= $data['id'] ?>">
+    <div class="main-wrapper">   
+        <div class="container2">
+            <h1>Edit Data Pengguna</h1>
             
-            <label for="nama_depan">Nama Depan:</label>
-            <input type="text" id="nama_depan" name="nama_depan" value="<?= htmlspecialchars($data['nama_depan']) ?>" required>
-            
-            <label for="nama_belakang">Nama Belakang:</label>
-            <input type="text" id="nama_belakang" name="nama_belakang" value="<?= htmlspecialchars($data['nama_belakang']) ?>" required>
-            
-            <label for="jenis_kelamin">Jenis Kelamin:</label>
-            <select name="jenis_kelamin" id="jenis_kelamin" required>
-                <option value="Laki-laki" <?= $data['jenis_kelamin'] == 'Laki-laki' ? 'selected' : '' ?>>Laki-laki</option>
-                <option value="Perempuan" <?= $data['jenis_kelamin'] == 'Perempuan' ? 'selected' : '' ?>>Perempuan</option>
-            </select>
-            
-            <label for="tanggal_lahir">Tanggal Lahir:</label>
-            <input type="date" id="tanggal_lahir" name="tanggal_lahir" value="<?= $data['tanggal_lahir'] ?>" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" value="<?= htmlspecialchars($data['email']) ?>" required>
-            
-            <button type="submit" class="btn-submit">Update Data</button>
-            <a href="index.php" class="btn-cancel">Batal</a>
-        </form>
+            <form action="update.php" method="POST">
+                <input type="hidden" name="id" value="<?= $data['id'] ?>">
+                
+                <label for="nama_depan">Nama Depan:</label>
+                <input type="text" id="nama_depan" name="nama_depan" value="<?= htmlspecialchars($data['nama_depan']) ?>" required>
+                
+                <label for="nama_belakang">Nama Belakang:</label>
+                <input type="text" id="nama_belakang" name="nama_belakang" value="<?= htmlspecialchars($data['nama_belakang']) ?>" required>
+                
+                <label for="jenis_kelamin">Jenis Kelamin:</label>
+                <select name="jenis_kelamin" id="jenis_kelamin" required>
+                    <option value="Laki-laki" <?= $data['jenis_kelamin'] == 'Laki-laki' ? 'selected' : '' ?>>Laki-laki</option>
+                    <option value="Perempuan" <?= $data['jenis_kelamin'] == 'Perempuan' ? 'selected' : '' ?>>Perempuan</option>
+                </select>
+                
+                <label for="tanggal_lahir">Tanggal Lahir:</label>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" value="<?= $data['tanggal_lahir'] ?>" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<?= htmlspecialchars($data['email']) ?>" required>
+                
+                <button type="submit" class="btn-submit">Update Data</button>
+                <a href="index.php" class="btn-cancel">Batal</a>
+            </form>
+        </div>
     </div>
 
 <?php

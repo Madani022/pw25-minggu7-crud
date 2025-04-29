@@ -25,32 +25,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 $conn->close();
 ?>
-    <div class="container" >
-        <h1>Tambah Data Baru</h1>
-        <form action="" method="POST">
-            <label for="nama_depan">Nama Depan:</label>
-            <input type="text" id="nama_depan" name="nama_depan" required>
-            
-            <label for="nama_belakang">Nama Belakang:</label>
-            <input type="text" id="nama_belakang" name="nama_belakang" required>
-            
-            <label for="jenis_kelamin">Jenis Kelamin:</label>
-            <select name="jenis_kelamin" id="jenis_kelamin" required>
-                <option value="Laki-laki">Laki-laki</option>
-                <option value="Perempuan">Perempuan</option>
-            </select>
-            
-            <label for="tanggal_lahir">Tanggal Lahir:</label>
-            <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <button type="submit" class="btn-submit">Simpan</button>
-            <a href="index.php" class="btn-cancel">Batal</a>
-        </form>
+    <div class="main-wrapper">
+        <div class="container2" >
+            <h1>Tambah Data Baru</h1>
+            <form action="" method="POST">
+                <label for="nama_depan">Nama Depan:</label>
+                <input type="text" id="nama_depan" name="nama_depan" required>
+                
+                <label for="nama_belakang">Nama Belakang:</label>
+                <input type="text" id="nama_belakang" name="nama_belakang" required>
+                
+                <label for="jenis_kelamin">Jenis Kelamin:</label>
+                <select name="jenis_kelamin" id="jenis_kelamin" required>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+                
+                <label for="tanggal_lahir">Tanggal Lahir:</label>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <button type="submit" class="btn-submit">Simpan</button>
+                <a href="index.php" class="btn-cancel">Batal</a>
+            </form>
+        </div>
     </div>
-
 <?php
 include 'includes/footer.php';
 ?>
